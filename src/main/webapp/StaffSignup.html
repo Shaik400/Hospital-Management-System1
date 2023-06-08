@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            animation: glowing 2s infinite;
+        }
+
+        @keyframes glowing {
+            0% { text-shadow: 0 0 10px white; }
+            50% { text-shadow: none; }
+            100% { text-shadow: 0 0 10px white; }
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: grey;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th {
+            text-align: right;
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            display: inline-block;
+            background-color: grey;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="reset"] {
+            background-color: darkgrey;
+        }
+
+        button:hover {
+            background-color: #888888;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Staff Details</h1><br>
+    <form action="staffsignup1" method="post">
+        <table>
+            <tr>
+                <th><label for="name">Name:</label></th>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <th><label for="mobile">Mobile:</label></th>
+                <td><input type="tel" pattern="[0-9]{10}" name="mobile" id="mobile"></td>
+            </tr> 
+            <tr>
+                <th><label for="email">Email:</label></th>
+                <td><input type="email" name="email" id="email"></td>
+            </tr> 
+            <tr>
+                <th><label for="password">Password:</label></th>
+                <td><input type="password" name="password" id="password"></td>
+            </tr> 
+            <tr>
+                <th><label for="dob">DOB:</label></th>
+                <td><input type="date" name="dob" id="dob"></td>
+            </tr> 
+            <tr>
+                <th><label for="gender">Gender:</label></th>
+                <td>
+                    <input type="radio" name="gender" value="male" id="gender">Male
+                    <input type="radio" name="gender" value="female" id="gender">Female
+                </td>
+            </tr> 
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="reset">Cancel</button>
+                    <button>Register</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br><br>
+    <a href="SelectRole.html"><button>Back</button></a>
+</body>
+</html>

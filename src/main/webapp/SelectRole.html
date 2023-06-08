@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Role</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            animation: glowing 2s infinite;
+        }
+
+        @keyframes glowing {
+            0% { text-shadow: 0 0 10px white; }
+            50% { text-shadow: none; }
+            100% { text-shadow: 0 0 10px white; }
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: grey;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            margin: 10px;
+        }
+
+        button {
+            background-color: grey;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="reset"] {
+            background-color: darkgrey;
+        }
+
+        button:hover {
+            background-color: #888888;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Type of Account</h1>
+    <form action="selectrole" method="post">
+        <input type="radio" name="role" value="staff" required>Staff<br>
+        <input type="radio" name="role" value="doctor">Doctor<br><br>
+        <button type="reset">Cancel</button><button>Submit</button>
+    </form>
+    <br><br>
+    <a href="Login.html"><button>Back</button></a>
+</body>
+</html>

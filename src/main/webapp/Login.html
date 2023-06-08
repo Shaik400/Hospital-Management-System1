@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/95css/3.0.3/95.min.css">
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white;
+            animation: glowing 2s infinite;
+        }
+
+        @keyframes glowing {
+            0% { text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white; }
+            50% { text-shadow: none; }
+            100% { text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white; }
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: grey;
+            color: white;
+            border-radius: 5px;
+            animation: glowing-border 4s infinite;
+        }
+
+        @keyframes glowing-border {
+            0% { box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(0, 0, 255, 0.5); }
+            100% { box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); }
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th {
+            text-align: right;
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 3px;
+            background-color: #f2f2f2;
+        }
+
+        button {
+            display: inline-block;
+            background-color: grey;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #888888;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+        }
+
+        .ambulance {
+            position: absolute;
+            bottom: -100px;
+            left: calc(50% - 50px);
+            width: 100px;
+            height: 100px;
+            background-image: url('ambulance.png');
+            background-size: cover;
+            animation: move-ambulance 6s infinite;
+            z-index: 1;
+        }
+
+        @keyframes move-ambulance {
+            0% { transform: translateX(-200px); }
+            50% { transform: translateX(200px); }
+            100% { transform: translateX(-200px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome To Hospital Home Page</h1>.
+    <form action="Login" method="post">
+        <table>
+            <tr>
+                <th><label for="id">Id:</label></th>
+                <td><input type="text" name="id" id="id"></td>
+            </tr>
+            <tr>
+                <th><label for="password">Password:</label></th>
+                <td><input type="password" name="password" id="password"></td>
+            </tr> 
+            <tr>
+                <td colspan="2" class="center">
+                    <button type="reset">Cancel</button>
+                    <button>Login</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <a href="ForgotPassword.html">Forgot Password?</a>
+    <br><br>
+    <a href="SelectRole.html"><button>Click here to create a new Account</button></a>
+    <br><br>
+    <a href="Home.html"><button>Home</button></a>
+
+    <div class="ambulance"></div>
+
+    <script>
+        setTimeout(() => {
+            const ambulance = document.querySelector('.ambulance');
+            ambulance.classList.add('animate');
+        }, 2000);
+    </script>
+</body>
+</html>
